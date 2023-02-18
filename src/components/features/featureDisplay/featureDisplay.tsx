@@ -19,7 +19,7 @@ const FeatureDisplay = () => {
     setCommandMap(mappedCommands);
     setModuleMap(mappedModules);
     setHudMap(mappedHud);
-    setData(modules[0], "module");
+    setData(modules[0]);
   }, []);
 
   const updateSelectedModule = (moduleName: string, type: string) => {
