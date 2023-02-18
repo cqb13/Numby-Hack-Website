@@ -23,13 +23,16 @@ export type Setting = {
       lineColor: boolean;
       tracerColor: boolean;
       normalColor: boolean;
+      background: boolean;
+      text: boolean;
+      color?: string;
     };
     description: string;
   }[];
 };
 
 //TODO: add mixin modules
-
+//TODO: add a list option for boolean settings that use names of settings to toggle their visibility
 const modules: Setting[] = [
   {
     name: "Auto Log +",
@@ -154,7 +157,10 @@ const modules: Setting[] = [
           sideColor: true,
           lineColor: true,
           tracerColor: false,
-          normalColor: false
+          normalColor: false,
+          background: false,
+          text: false,
+          color: "#92bc62"
         },
         description: "The color of the render."
       },
@@ -265,7 +271,10 @@ const modules: Setting[] = [
           lineColor: false,
           sideColor: false,
           tracerColor: false,
-          normalColor: true
+          normalColor: false,
+          background: false,
+          text: true,
+          color: "#92bc62"
         },
         description: "The color of the feedback messages."
       }
@@ -325,7 +334,10 @@ const modules: Setting[] = [
           lineColor: true,
           sideColor: true,
           tracerColor: true,
-          normalColor: false
+          normalColor: false,
+          background: false,
+          text: false,
+          color: "#92bc62"
         },
         description: "The color of the render"
       }
@@ -434,7 +446,10 @@ const modules: Setting[] = [
           lineColor: false,
           sideColor: false,
           tracerColor: false,
-          normalColor: true
+          normalColor: true,
+          background: false,
+          text: false,
+          color: "#92bc62"
         },
         description: "The first color to change."
       },
@@ -447,7 +462,10 @@ const modules: Setting[] = [
           lineColor: false,
           sideColor: false,
           tracerColor: false,
-          normalColor: true
+          normalColor: true,
+          background: false,
+          text: false,
+          color: "#92bc62"
         },
         description: "The second color to change."
       }
@@ -512,7 +530,10 @@ const modules: Setting[] = [
           lineColor: true,
           sideColor: true,
           tracerColor: false,
-          normalColor: false
+          normalColor: false,
+          background: false,
+          text: false,
+          color: "#ff0000"
         },
         description: "The color of the new chunks."
       },
@@ -525,7 +546,10 @@ const modules: Setting[] = [
           lineColor: true,
           sideColor: true,
           tracerColor: false,
-          normalColor: false
+          normalColor: false,
+          background: false,
+          text: false,
+          color: "#00ff00"
         },
         description: "The color of the old chunks."
       }
@@ -638,7 +662,10 @@ const modules: Setting[] = [
           lineColor: false,
           sideColor: false,
           tracerColor: false,
-          normalColor: true
+          normalColor: false,
+          background: false,
+          text: true,
+          color: "#ffffff"
         },
         description: "The color of the nametags text."
       },
@@ -651,7 +678,10 @@ const modules: Setting[] = [
           lineColor: false,
           sideColor: false,
           tracerColor: false,
-          normalColor: true
+          normalColor: false,
+          background: true,
+          text: false,
+          color: "#000000bf"
         },
         description: "The color of the nametags background."
       }
@@ -736,7 +766,10 @@ const modules: Setting[] = [
           lineColor: true,
           sideColor: true,
           tracerColor: false,
-          normalColor: false
+          normalColor: false,
+          background: false,
+          text: false,
+          color: "#92bc62"
         },
         description: "The color of the place location"
       }
@@ -799,7 +832,10 @@ const modules: Setting[] = [
           lineColor: false,
           sideColor: false,
           tracerColor: false,
-          normalColor: true
+          normalColor: true,
+          background: false,
+          text: false,
+          color: "#92bc62"
         },
         description: "Color of the render."
       }

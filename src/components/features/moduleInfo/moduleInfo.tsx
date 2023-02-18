@@ -1,6 +1,19 @@
-const ModuleInfo = (moduleInfo: any) => {
-  const info = moduleInfo.moduleInfo;
+const ModuleInfo = (props: any) => {
+  const { moduleInfo, type } = props;
+  const info = moduleInfo;
   const noSettings = info.settings.length === 0;
+
+  if (type === "command") {
+    return (
+      <>
+        <h1>{info.name}</h1>
+        <p>{info.description}</p>
+        <hr />
+        <p>{`Usage: ${info.usage}`}</p>
+        {info.aliases ? <p>{`Aliases: ${info.aliases.join(", ")}`}</p> : null}
+      </>
+    );
+  }
 
   if (noSettings) {
     return (
@@ -13,13 +26,15 @@ const ModuleInfo = (moduleInfo: any) => {
     );
   }
 
-
   //TODO: add all numby hack modules to module list
+  //TODO: implement the link toggle from general.ts
+  //TODO: Checkboxs cant be toggled
   let currentCategory = "";
   return (
     <>
       <h1>{info.name}</h1>
       <p>{info.description}</p>
+      {info.note ? <sub>{info.note}</sub> : null}
       <hr />
       {info.settings.map((setting: any, index: number) => {
         const isFirstInCategory = setting.category !== currentCategory;
@@ -44,7 +59,7 @@ const ModuleInfo = (moduleInfo: any) => {
               </select>
             ) : null}
             {setting.type === "Range" ? (
-              <input type='range' min={0} max={10} />
+              <input type='range' min={0} defaultValue={5} max={10} />
             ) : null}
             {setting.type === "Color" ? (
               <section>
@@ -61,25 +76,25 @@ const ModuleInfo = (moduleInfo: any) => {
                 {setting.color.sideColor ? (
                   <>
                     <p>Side Color</p>
-                    <input type='color' />
+                    <input type='color' value={setting.color.color}/>
                   </>
                 ) : null}
                 {setting.color.lineColor ? (
                   <>
-                    <p>Side Color</p>
-                    <input type='color' />
+                    <p>Line Color</p>
+                    <input type='color' value={setting.color.color}/>
                   </>
                 ) : null}
                 {setting.color.tracerColor ? (
                   <>
                     <p>Tracer Color</p>
-                    <input type='color' />
+                    <input type='color' value={setting.color.color}/>
                   </>
                 ) : null}
                 {setting.color.normalColor ? (
                   <>
                     <p>Color</p>
-                    <input type='color' />
+                    <input type='color' value={setting.color.color}/>
                   </>
                 ) : null}
               </section>
