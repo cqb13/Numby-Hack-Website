@@ -1,0 +1,42 @@
+.hero {
+  background: url(../../../public/Background-4.png) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  filter: blur(0.5px);
+  z-index: -1;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  min-width: 20%;
+  background: rgb(245, 247, 250, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--text-color);
+  width: 40%;
+  color: var(--color-primary);
+}
+
+.title-container > h1 {
+  font-size: 5rem;
+}
+
+.title-container > p {
+  font-size: 1.4rem;
+}
+
+.title-container > sub {
+  font-size: 1rem;
+}
+
+.title-container > * {
+  z-index: 1;
+}

@@ -1,0 +1,74 @@
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.feature-display-container {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr;
+  grid-template-rows: 1fr;
+  padding: 10px;
+  background: rgb(245, 247, 250, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-height: 80vh;
+  border: 1px solid var(--text-color);
+}
+
+.module-list-container {
+  border-right: 2px solid var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.module-item-name {
+  cursor: pointer;
+  transition: 0.25s;
+  padding-left: 10px;
+}
+
+.module-item-name:hover {
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px var(--color-primary);
+}
+
+.module-category-name {
+  font-size: 1.5rem;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.module-info-container {
+  overflow-y: scroll;
+  padding-left: 20px;
+}
+
+.module-info-container hr {
+  float: left;
+  width: 80%;
+}
+
+.module-setting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.module-setting {
+  display: flex;
+  flex-direction: column;
+}

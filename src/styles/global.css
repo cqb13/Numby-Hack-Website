@@ -1,0 +1,49 @@
+:root {
+  --color-primary: #92bc62;
+  --background-color: #444444;
+  --text-color: #f5f7fa;
+
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 2px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: 2px;
+}
+
+p {
+  font-size: 1rem;
+  margin: 2px;
+}
+
+sub {
+  font-size: 0.75rem;
+  margin: 2px;
+}
+
+.content-section {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
