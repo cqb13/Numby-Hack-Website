@@ -20,6 +20,7 @@ const FeatureDisplay = () => {
     }
   };
 
+  //TODO: to feature list, make current feature be highlighted
   return (
     <section className='feature-display-container'>
       <section className='module-list-container'>

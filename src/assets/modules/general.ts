@@ -11,7 +11,6 @@ export type Setting = {
       | "Dropdown"
       | "Range"
       | "Color"
-      | "Button"
       | "Keybind"
       | "Module List"
       | "Block List";

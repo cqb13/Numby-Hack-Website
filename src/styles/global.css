@@ -9,6 +9,7 @@
   font-size: 16px;
 }
 
+/*TODO: scroll snapping to sections*/
 html {
   scroll-behavior: smooth;
 }
