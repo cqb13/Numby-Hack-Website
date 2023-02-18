@@ -1,7 +1,6 @@
 const ModuleInfo = (props: any) => {
   const { moduleInfo, type } = props;
   const info = moduleInfo;
-  const noSettings = info.settings.length === 0;
 
   if (type === "command") {
     return (
@@ -14,6 +13,8 @@ const ModuleInfo = (props: any) => {
       </>
     );
   }
+
+  const noSettings = info.settings.length === 0;
 
   if (noSettings) {
     return (

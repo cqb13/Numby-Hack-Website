@@ -3,13 +3,15 @@ import hudElements from "../../../assets/modules/hud";
 import modules from "../../../assets/modules/general";
 import mapModules from "../../../utils/mapModules";
 import ModuleInfo from "../moduleInfo/moduleInfo";
+import { command } from "../../../assets/modules/commands";
+import { setting } from "../../../assets/modules/general";
 import { useEffect, useState } from "react";
 
 const FeatureDisplay = () => {
   const [commandMap, setCommandMap] = useState({} as { [key: string]: number });
   const [moduleMap, setModuleMap] = useState({} as { [key: string]: number });
   const [hudMap, setHudMap] = useState({} as { [key: string]: number });
-  const [data, setData] = useState({} as any);
+  const [data, setData] = useState(modules[0] as command | setting);
   const [type, setType] = useState("module");
 
   useEffect(() => {
@@ -19,7 +21,6 @@ const FeatureDisplay = () => {
     setCommandMap(mappedCommands);
     setModuleMap(mappedModules);
     setHudMap(mappedHud);
-    setData(modules[0]);
   }, []);
 
   const updateSelectedModule = (moduleName: string, type: string) => {

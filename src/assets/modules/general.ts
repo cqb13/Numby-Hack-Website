@@ -1,4 +1,4 @@
-export type Setting = {
+export type setting = {
   name: string;
   description: string;
   note?: string;
@@ -33,7 +33,7 @@ export type Setting = {
 
 //TODO: add mixin modules
 //TODO: add a list option for boolean settings that use names of settings to toggle their visibility
-const modules: Setting[] = [
+const modules: setting[] = [
   {
     name: "Auto Log +",
     description:

@@ -1,6 +1,6 @@
-import { Setting } from "./general";
+import { setting } from "./general";
 
-const hudElements: Setting[] = [
+const hudElements: setting[] = [
   {
     name: "81",
     description: "Number81 On Top!",

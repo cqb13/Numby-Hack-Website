@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <nav>
       <div className='right-logo'>
-        <img src='../../../public/icon.png' width={60} height={60} alt='icon' />
+        <img src='/icon.png' width={60} height={60} alt='icon' />
       </div>
       <div className='center-nav'>
         <a href='#home'>Home</a>
