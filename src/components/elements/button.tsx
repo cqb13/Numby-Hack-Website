@@ -7,7 +7,7 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  const handleClick = (event: ButtonProps) => {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     props.onClick?.(event);
   };
 
