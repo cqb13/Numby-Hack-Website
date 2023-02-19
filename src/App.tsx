@@ -1,6 +1,7 @@
 import Features from './components/features/features'
 import Hero from './components/hero/hero'
 import Nav from './components/nav/nav'
+import FAQ from './components/faq/faq'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Nav />
       <Hero />
       <Features />
+      <FAQ />
     </main>
   )
 }

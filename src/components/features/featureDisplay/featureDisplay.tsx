@@ -1,15 +1,17 @@
+import { command } from "../../../assets/modules/commands";
+import { setting } from "../../../assets/modules/general";
 import commands from "../../../assets/modules/commands";
 import hudElements from "../../../assets/modules/hud";
 import modules from "../../../assets/modules/general";
 import mapModules from "../../../utils/mapModules";
 import ModuleInfo from "../moduleInfo/moduleInfo";
-import { command } from "../../../assets/modules/commands";
-import { setting } from "../../../assets/modules/general";
 import { useEffect, useState } from "react";
+import other from "../../../assets/modules/other";
 
 const FeatureDisplay = () => {
   const [commandMap, setCommandMap] = useState({} as { [key: string]: number });
   const [moduleMap, setModuleMap] = useState({} as { [key: string]: number });
+  const [otherMap, setOtherMap] = useState({} as { [key: string]: number });
   const [hudMap, setHudMap] = useState({} as { [key: string]: number });
   const [data, setData] = useState(modules[0] as command | setting);
   const [type, setType] = useState("module");
@@ -18,8 +20,10 @@ const FeatureDisplay = () => {
     const mappedCommands = mapModules(commands);
     const mappedModules = mapModules(modules);
     const mappedHud = mapModules(hudElements);
+    const mappedOther = mapModules(other);
     setCommandMap(mappedCommands);
     setModuleMap(mappedModules);
+    setOtherMap(mappedOther);
     setHudMap(mappedHud);
   }, []);
 
@@ -33,10 +37,12 @@ const FeatureDisplay = () => {
     } else if (type === "hud") {
       setData(hudElements[hudMap[moduleName]]);
       setType("hud");
+    } else if (type === "other") {
+      setData(other[otherMap[moduleName]]);
+      setType("other");
     }
   };
 
-  //TODO: to feature list, make current feature be highlighted
   return (
     <section className='feature-display-container'>
       <section className='module-list-container'>
@@ -68,6 +74,17 @@ const FeatureDisplay = () => {
             <div
               className='module-item-name'
               onClick={() => updateSelectedModule(key, "command")}
+            >
+              {key}
+            </div>
+          );
+        })}
+        <p className='module-category-name'>Other</p>
+        {Object.keys(otherMap).map((key) => {
+          return (
+            <div
+              className='module-item-name'
+              onClick={() => updateSelectedModule(key, "other")}
             >
               {key}
             </div>

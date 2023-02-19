@@ -1,0 +1,14 @@
+input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  width: 40%;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}

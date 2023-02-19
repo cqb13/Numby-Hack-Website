@@ -31,7 +31,6 @@ export type setting = {
   }[];
 };
 
-//TODO: add mixin modules
 //TODO: add a list option for boolean settings that use names of settings to toggle their visibility
 const modules: setting[] = [
   {

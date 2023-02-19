@@ -1,3 +1,5 @@
+import Checkbox from "../../elements/checkbox";
+
 const ModuleInfo = (props: any) => {
   const { moduleInfo, type } = props;
   const info = moduleInfo;
@@ -27,9 +29,8 @@ const ModuleInfo = (props: any) => {
     );
   }
 
-  //TODO: add all numby hack modules to module list
   //TODO: implement the link toggle from general.ts
-  //TODO: Checkboxs cant be toggled
+  //TODO: Checkboxes cant be toggled
   let currentCategory = "";
   return (
     <>
@@ -43,12 +44,13 @@ const ModuleInfo = (props: any) => {
 
         return (
           <div key={index} className='module-setting'>
-            {isFirstInCategory && <h3>{setting.category}</h3>}
-            <p>{setting.name}</p>
-            <p>{setting.description}</p>
+            {isFirstInCategory && <h3>{`${setting.category}:`}</h3>}
             {setting.type === "Boolean" ? (
-              <input type='checkbox' checked={setting.booleanState} />
-            ) : null}
+              <Checkbox value={setting.name} checked={setting.booleanState}/>
+            ) : (
+              <p>{setting.name}</p>
+            )}
+            <p>{setting.description}</p>
             {setting.type === "Text" ? (
               <input type='text' placeholder={setting.placeholder} />
             ) : null}
@@ -77,25 +79,37 @@ const ModuleInfo = (props: any) => {
                 {setting.color.sideColor ? (
                   <>
                     <p>Side Color</p>
-                    <input type='color' value={setting.color.color}/>
+                    <input type='color' value={setting.color.color} />
                   </>
                 ) : null}
                 {setting.color.lineColor ? (
                   <>
                     <p>Line Color</p>
-                    <input type='color' value={setting.color.color}/>
+                    <input type='color' value={setting.color.color} />
+                  </>
+                ) : null}
+                {setting.color.background ? (
+                  <>
+                    <p>Line Color</p>
+                    <input type='color' value={setting.color.color} />
+                  </>
+                ) : null}
+                {setting.color.text ? (
+                  <>
+                    <p>Line Color</p>
+                    <input type='color' value={setting.color.color} />
                   </>
                 ) : null}
                 {setting.color.tracerColor ? (
                   <>
                     <p>Tracer Color</p>
-                    <input type='color' value={setting.color.color}/>
+                    <input type='color' value={setting.color.color} />
                   </>
                 ) : null}
                 {setting.color.normalColor ? (
                   <>
                     <p>Color</p>
-                    <input type='color' value={setting.color.color}/>
+                    <input type='color' value={setting.color.color} />
                   </>
                 ) : null}
               </section>

@@ -1,13 +1,14 @@
 .feature {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .feature-display-container {
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr;
+  grid-template-columns: 0.6fr 2.5fr;
   grid-template-rows: 1fr;
   padding: 10px;
   background: rgb(245, 247, 250, 0.1);

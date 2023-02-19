@@ -1,6 +1,7 @@
 import "./nav.css";
 
 const Nav = () => {
+  //TODO: hide nav bar in icon upon scroll
   return (
     <nav>
       <div className='right-logo'>
@@ -9,9 +10,9 @@ const Nav = () => {
       <div className='center-nav'>
         <a href='#home'>Home</a>
         <a href='#features'>Features</a>
-        <a href='#contact'>Contact</a>
+        <a href='#faq'>FAQ</a>
       </div>
-      {/*<div className='spacer'></div>*/}
+      <div className='spacer'></div>
     </nav>
   );
 };
