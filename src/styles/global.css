@@ -1,15 +1,14 @@
 :root {
   --color-primary: #92bc62;
   --background-color: #444444;
+  --light-text-color: #868686;
   --text-color: #f5f7fa;
 
   font-family: "Roboto", sans-serif;
   color: var(--text-color);
-  font-weight: 700;
   font-size: 16px;
 }
 
-/*TODO: scroll snapping to sections*/
 html {
   scroll-behavior: smooth;
 }
@@ -20,36 +19,66 @@ body {
 
 h1 {
   font-size: 3rem;
+  font-weight: 700;
   margin: 2px;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-weight: 700;
   margin: 2px;
 }
 
 h3 {
   font-size: 1.25rem;
+  font-weight: 700;
   margin: 2px;
 }
 
 p {
   font-size: 1rem;
+  font-weight: 600;
+  margin: 2px;
+}
+
+span {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 2px;
+}
+
+pre {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
   margin: 2px;
 }
 
 sub {
   font-size: 0.75rem;
+  color: var(--light-text-color);
+  font-weight: 600;
   margin: 2px;
 }
 
 a {
   color: var(--text-color);
+  font-weight: 600;
   text-decoration: none;
 }
 
+.green-sub {
+  color: var(--color-primary);
+}
+
+.colored-container {
+  background: rgb(245, 247, 250, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--text-color);
+  border-radius: 16px;
+}
+
 .content-section {
-  display: flex;
   min-height: 100vh;
   background-color: var(--background-color);
 }
@@ -58,7 +87,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: left;
-  max-width: 30%;
+  width: 30%;
   padding: 10px;
 }
 

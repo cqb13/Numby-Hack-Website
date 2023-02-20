@@ -32,13 +32,13 @@ const Hero = () => {
 
   return (
     <section className='hero' id='home'>
-      <div className='title-container'>
+      <div className='title-container colored-container'>
         <h1>Numby Hack</h1>
         <p>
           A Meteor Client addon focused on giving users more customization
           options. Made in honor of Number81.
         </p>
-        <sub>Made by: cqb13</sub>
+        <sub className="green-sub">Made by: cqb13</sub>
       </div>
       <div className='button-container'>
         <Button
@@ -46,11 +46,11 @@ const Hero = () => {
           onClick={getDownloads}
         >
           Download
-          <sub>downloads:{downloads}</sub>
+          <sub className="button-detail">downloads:{downloads}</sub>
         </Button>
         <Button href='https://github.com/cqb13/Numby-hack/' target='_blank'>
           Github
-          <sub>stars:{stars}</sub>
+          <sub className="button-detail">stars:{stars}</sub>
         </Button>
       </div>
       <div className='bounce arrow-container'>

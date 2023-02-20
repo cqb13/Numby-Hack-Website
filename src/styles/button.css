@@ -29,3 +29,12 @@ a.button:hover {
   background-color: var(--text-color);
   color: var(--color-primary);
 }
+
+a.button sub {
+  color: var(--text-color);
+  transition: all 0.25s ease-in-out;
+}
+
+a.button:hover sub {
+  color: var(--color-primary);
+}

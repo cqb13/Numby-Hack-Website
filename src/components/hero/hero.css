@@ -17,10 +17,7 @@
   flex-direction: column;
   padding: 50px;
   min-width: 20%;
-  background: rgb(245, 247, 250, 0.1);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--text-color);
   width: 40%;
   color: var(--color-primary);
 }

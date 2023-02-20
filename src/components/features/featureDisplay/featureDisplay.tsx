@@ -44,7 +44,7 @@ const FeatureDisplay = () => {
   };
 
   return (
-    <section className='feature-display-container'>
+    <section className='feature-display-container colored-container'>
       <section className='module-list-container'>
         <p className='module-category-name'>General</p>
         {Object.keys(moduleMap).map((key) => {
