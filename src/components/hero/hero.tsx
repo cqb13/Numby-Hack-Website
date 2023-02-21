@@ -9,7 +9,7 @@ const Hero = () => {
 
   useEffect(() => {
     getDownloads();
-    fetch("https://g-19m4.onrender.com/LDU?user=cqb13&repo=Numby-hack")
+    fetch("https://github-release-downloads.vercel.app/LDU?user=cqb13&repo=Numby-hack")
       .then((res) => res.text())
       .then((data) => {
         setDownloadLink(data);
@@ -23,7 +23,7 @@ const Hero = () => {
   }, []);
 
   const getDownloads = () => {
-    fetch("https://g-19m4.onrender.com/TRD?user=cqb13&repo=Numby-hack")
+    fetch("https://github-release-downloads.vercel.app/TRD?user=cqb13&repo=Numby-hack")
       .then((res) => res.json())
       .then((data) => {
         setDownloads(data);
