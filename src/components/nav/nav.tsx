@@ -1,9 +1,9 @@
+import useScroll from "../../utils/hooks/useScroll";
 import "./nav.css";
 
 const Nav = () => {
-  //TODO: hide nav bar in icon upon scroll
   return (
-    <nav>
+    <nav className={useScroll("scrollOffSet", 10) ? "scrolled" : ""}>
       <div className='right-logo'>
         <img src='/icon.png' width={60} height={60} alt='icon' />
       </div>

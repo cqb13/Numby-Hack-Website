@@ -40,3 +40,9 @@ nav {
   width: 60px;
   height: 60px;
 }
+
+.scrolled {
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgb(146, 188, 98, 0.3);
+  z-index: 2;
+}
