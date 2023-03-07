@@ -110,6 +110,11 @@ a {
   animation: bounce 2s infinite;
 }
 
+.empty-space {
+  height: 10rem;
+  background-color: var(--background-color);
+}
+
 @keyframes bounce {
   0%,
   20%,
