@@ -1,226 +1,10 @@
-import { setting } from "./general";
+import moduleSettings from "../types/moduleSettings";
 
-const hudElements: setting[] = [
+const hudElements: moduleSettings[] = [
   {
     name: "81",
     description: "Number81 On Top!",
     settings: []
-  },
-  {
-    name: "Combat Info",
-    description: "Displays information on your current combat target.",
-    note: "Original from Meteor",
-    settings: [
-      {
-        name: "Scale",
-        category: "General",
-        type: "Range",
-        description: "The scale of the combat element."
-      },
-      {
-        name: "Range",
-        category: "General",
-        type: "Range",
-        description: "The range to target player."
-      },
-      {
-        name: "Ping",
-        category: "General",
-        type: "Boolean",
-        booleanState: true,
-        description: "Displays the ping of the target player."
-      },
-      {
-        name: "Distance",
-        category: "General",
-        type: "Boolean",
-        booleanState: true,
-        description: "Displays the distance to the target player."
-      },
-      {
-        name: "Enchantments",
-        category: "General",
-        type: "Boolean",
-        booleanState: true,
-        description: "Displays the enchantments of the target player."
-      },
-      {
-        name: "Background Color",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: true,
-          text: false,
-          color: "rgb(0, 0, 0, 64)"
-        },
-        description: "The color of the background."
-      },
-      {
-        name: "Enchantment Color",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ffffff"
-        },
-        description: "The color of the enchantments."
-      },
-      {
-        name: "Ping Stage 1",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#0fff0f"
-        },
-        description: "The color of the ping when it is below 75ms."
-      },
-      {
-        name: "Ping Stage 2",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ff960f"
-        },
-        description: "The color of the ping when it is between 75ms and 200ms."
-      },
-      {
-        name: "Ping Stage 3",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ff0f0f"
-        },
-        description: "The color of the ping when it is above 200ms."
-      },
-      {
-        name: "Distance Stage 1",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ff0f0f"
-        },
-        description: "The color when a player is within 10 blocks."
-      },
-      {
-        name: "Distance Stage 2",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ff960f"
-        },
-        description: "The color when a player is within 50 blocks."
-      },
-      {
-        name: "Distance Stage 3",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#0fff0f"
-        },
-        description: "The color when a player is further than 50 blocks."
-      },
-      {
-        name: "Health Stage 1",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ff0f0f"
-        },
-        description: "The color on the left of the health gradient."
-      },
-      {
-        name: "Ping Stage 2",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#ff960f"
-        },
-        description: "The color in the middle of the health gradient."
-      },
-      {
-        name: "Ping Stage 3",
-        category: "Render",
-        type: "Color",
-        color: {
-          shapeMode: false,
-          lineColor: false,
-          sideColor: false,
-          tracerColor: false,
-          normalColor: false,
-          background: false,
-          text: true,
-          color: "#0fff0f"
-        },
-        description: "The color on the right of the health gradient."
-      }
-    ]
   },
   {
     name: "Crystals/s",
@@ -346,6 +130,128 @@ const hudElements: setting[] = [
     name: "Server Brand",
     description: "Displays the brand of the server you are playing on.",
     settings: []
+  },
+  {
+    name: "Text Radar",
+    description: "Displays players and their stats in your visual range.",
+    settings: [
+      {
+        name: "Limit",
+        category: "General",
+        type: "Range",
+        description: "The maximum amount of players to display."
+      },
+      {
+        name: "Health",
+        category: "General",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the health to the player next to their name."
+      },
+      {
+        name: "Ping",
+        category: "General",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the ping to the player next to their name."
+      },
+      {
+        name: "Distance",
+        category: "General",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the distance to the player next to their name."
+      },
+      {
+        name: "Friends",
+        category: "General",
+        type: "Boolean",
+        booleanState: false,
+        description: "Shows your friends in the list."
+      },
+      {
+        name: "Primary Color",
+        category: "Render",
+        type: "Color",
+        color: {
+          shapeMode: false,
+          lineColor: false,
+          sideColor: false,
+          tracerColor: false,
+          normalColor: false,
+          background: false,
+          text: true,
+          color: "#92bc62cc"
+        },
+        description: "The color of the text."
+      },
+      {
+        name: "Secondary Color",
+        category: "Render",
+        type: "Color",
+        color: {
+          shapeMode: false,
+          lineColor: false,
+          sideColor: false,
+          tracerColor: false,
+          normalColor: false,
+          background: false,
+          text: true,
+          color: "#AFAFAF"
+        },
+        description: "The color of the text."
+      },
+      {
+        name: "Shadow",
+        category: "Render",
+        type: "Boolean",
+        booleanState: true,
+        description: "Whether to display a shadow behind the text."
+      },
+      {
+        name: "Alignment",
+        category: "Render",
+        type: "Dropdown",
+        dropdown: ["Auto", "Left", "Center", "Right"],
+        description: "How to align the text horizontally."
+      },
+      {
+        name: "Custom Scale",
+        category: "Render",
+        type: "Boolean",
+        booleanState: false,
+        description: "Whether to use a custom scale rather than the global scale."
+      },
+      {
+        name: "Scale",
+        category: "Render",
+        type: "Range",
+        description: "The custom scale of the element."
+      },
+      {
+        name: "Background",
+        category: "Render",
+        type: "Boolean",
+        booleanState: true,
+        description: "Whether to display a background behind the element."
+      },
+      {
+        name: "Background Color",
+        category: "Render",
+        type: "Color",
+        color: {
+          shapeMode: false,
+          lineColor: false,
+          sideColor: false,
+          tracerColor: false, 
+          normalColor: false,
+          background: true,
+          text: false,
+          color: "#00000000"
+        },
+        description: "The color of the background."
+      }
+    ]
   }
 ];
 

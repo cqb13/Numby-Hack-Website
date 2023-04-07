@@ -1,6 +1,6 @@
-import { setting } from "./general";
+import moduleSettings from "../types/moduleSettings";
 
-const other: setting[] = [
+const other: moduleSettings[] = [
   {
     name: "Better Chat",
     description: "Adds a few features to meteors better chat module.",

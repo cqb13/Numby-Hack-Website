@@ -1,9 +1,4 @@
-export type command = {
-  name: string;
-  description: string;
-  usage: string;
-  aliases: string[];
-};
+import command from "../types/command";
 
 const commands: command[] = [
   {
