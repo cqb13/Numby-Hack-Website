@@ -2,20 +2,19 @@
   background: url(/Background-4.png) no-repeat center center;
   background-size: cover;
   height: 100vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  /*  filter: blur(0.5px); */
   z-index: -1;
+  width: 100%;
 }
 
 .title-container {
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 3rem;
   min-width: 20%;
   border-radius: 16px;
   width: 40%;
@@ -23,7 +22,7 @@
 }
 
 .title-container > h1 {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .title-container > p {
@@ -36,4 +35,17 @@
 
 .title-container > * {
   z-index: 1;
+}
+
+@media (max-width: 780px) {
+  .title-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .title-container {
+    width: 80%;
+    padding: 2rem;
+  }
 }

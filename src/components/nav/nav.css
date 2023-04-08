@@ -2,28 +2,13 @@ nav {
   position: fixed;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  padding-bottom: 0.5rem;
   width: 100%;
   z-index: 1;
 }
 
-.right-logo {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  text-align: center;
-}
-
-.center-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  text-align: center;
-  gap: 1rem;
-}
-
-.center-nav a {
+nav a {
   color: var(--color-secondary);
   text-decoration: none;
   font-size: 1.5rem;
@@ -31,14 +16,17 @@ nav {
   transition: 0.25s;
 }
 
-.center-nav a:hover {
+nav a:hover {
   color: var(--color-primary);
   text-shadow: 0 0 10px var(--color-primary);
 }
 
-.spacer {
-  width: 60px;
-  height: 60px;
+.icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 .scrolled {

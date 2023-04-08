@@ -3,9 +3,9 @@ import "./features.css";
 
 const Features = () => {
   return (
-    <section className='content-section feature' id='features'>
-      <section className='info-container'>
-        <h1 className='title'>Features</h1>
+    <section className="content-section feature" id="features">
+      <section className="info-container">
+        <h1 className="title">Features</h1>
         <hr />
         <span>
           Numby Hack is a Meteor Client addon for the latest version of

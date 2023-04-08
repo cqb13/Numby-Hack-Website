@@ -1,5 +1,5 @@
-import { command } from "../../../assets/modules/commands";
-import { setting } from "../../../assets/modules/general";
+import command from "../../../assets/types/command";
+import moduleSettings from "../../../assets/types/moduleSettings";
 import commands from "../../../assets/modules/commands";
 import hudElements from "../../../assets/modules/hud";
 import modules from "../../../assets/modules/general";
@@ -13,7 +13,7 @@ const FeatureDisplay = () => {
   const [moduleMap, setModuleMap] = useState({} as { [key: string]: number });
   const [otherMap, setOtherMap] = useState({} as { [key: string]: number });
   const [hudMap, setHudMap] = useState({} as { [key: string]: number });
-  const [data, setData] = useState(modules[0] as command | setting);
+  const [data, setData] = useState(modules[0] as command | moduleSettings);
   const [type, setType] = useState("module");
 
   useEffect(() => {

@@ -25,9 +25,6 @@ const FAQ = () => {
           <span>
             The best way to contact me is through discord.
             <br />
-            <a href='https://discord.gg/TtmQs7BzPJ' target='_blank'>
-              <img src='https://invidget.switchblade.xyz/TtmQs7BzPJ'></img>
-            </a>
             <br />
             My discord username is: <b>cqb13#8875</b>
           </span>

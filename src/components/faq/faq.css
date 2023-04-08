@@ -36,3 +36,44 @@
 .answer-container pre {
   white-space: pre-wrap;
 }
+
+@media (max-width: 900px) {
+  .faq {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .vertical-container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .test {
+    width: 70%;
+  }
+
+  .faq section span {
+    text-align: center;
+  }
+  
+  .faq hr {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .vertical-container {
+    width: 90%;
+  }
+
+  .vertical-container .info-container {
+    width: 90%;
+  }
+
+  .test {
+    width: 80%;
+    align-items: center;
+  }
+}

@@ -34,7 +34,7 @@ const ModuleInfo = (props: any) => {
   let currentCategory = "";
   return (
     <>
-      <h1>{info.name}</h1>
+      <h1 className="module-name">{info.name}</h1>
       <p>{info.description}</p>
       {info.note ? <sub>{info.note}</sub> : null}
       <hr />

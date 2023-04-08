@@ -38,3 +38,15 @@ a.button sub {
 a.button:hover sub {
   color: var(--color-primary);
 }
+
+@media (max-width: 100px) {
+  a.button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  a.button {
+    font-size: 1.5rem;
+  }
+}

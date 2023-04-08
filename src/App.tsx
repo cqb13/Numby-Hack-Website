@@ -5,14 +5,14 @@ import FAQ from "./components/faq/faq";
 
 function App() {
   return (
-    <main>
+    <>
       <Nav />
       <Hero />
       <section className="empty-space" />
       <Features />
       <section className="empty-space" />
       <FAQ />
-    </main>
+    </>
   );
 }
 

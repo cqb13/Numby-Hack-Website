@@ -11,6 +11,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
 }
 
 body {
@@ -67,6 +68,12 @@ a {
   text-decoration: none;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
 .green-sub {
   color: var(--color-primary);
 }
@@ -113,6 +120,12 @@ a {
 .empty-space {
   height: 10rem;
   background-color: var(--background-color);
+}
+
+@media (max-width: 900px) {
+  .title {
+    text-align: center;
+  }
 }
 
 @keyframes bounce {
