@@ -453,6 +453,61 @@ const modules: moduleSettings[] = [
     ]
   },
   {
+    name: "Game Settings",
+    description: "Allows for easier access to Minecraft's settings and adds some tweaks.",
+    settings: [
+      {
+        name: "hide HUD",
+        category: "general",
+        type: "Boolean",
+        booleanState: false,
+        description: "Hides your HUD."
+      },
+      {
+        name: "Pause On Lost Focus",
+        category: "general",
+        type: "Boolean",
+        booleanState: true,
+        description: "Pauses the game when it is not focussed."
+      },
+      {
+        name: "Skip Multiplayer Warning",
+        category: "general",
+        type: "Boolean",
+        booleanState: true,
+        description: "Skips the multiplayer warning."
+      },
+      {
+        name: "Cinematic Camera",
+        category: "general",
+        type: "Boolean",
+        booleanState: false,
+        description: "Smooth camera movement."
+      },
+      {
+        name: "Advanced Tooltips",
+        category: "general",
+        type: "Boolean",
+        booleanState: true,
+        description: "More information on items in your inventory"
+      },
+      {
+        name: "Hide Score",
+        category: "general",
+        type: "Boolean",
+        booleanState: true,
+        description: "Hides the score when you die."
+      },
+      {
+        name: "Chat Feedback",
+        category: "general",
+        type: "Boolean",
+        booleanState: true,
+        description: "Sends updates in the chat."
+      }
+    ]
+  },
+  {
     name: "God Bridge",
     description: "Puts you in the right position to god bridge.",
     note: "Not Finished",

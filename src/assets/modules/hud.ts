@@ -7,6 +7,11 @@ const hudElements: moduleSettings[] = [
     settings: []
   },
   {
+    name: "Baritone Process",
+    description: "Displays the current baritone process.",
+    settings: []
+  },
+  {
     name: "Crystals/s",
     description: "Displays the amount of crystals you have placed per second.",
     settings: []
