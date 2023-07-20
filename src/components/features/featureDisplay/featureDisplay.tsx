@@ -1,12 +1,12 @@
-import command from "../../../assets/types/command";
 import moduleSettings from "../../../assets/types/moduleSettings";
 import commands from "../../../assets/modules/commands";
 import hudElements from "../../../assets/modules/hud";
 import modules from "../../../assets/modules/general";
+import command from "../../../assets/types/command";
 import mapModules from "../../../utils/mapModules";
 import ModuleInfo from "../moduleInfo/moduleInfo";
-import { useEffect, useState } from "react";
 import other from "../../../assets/modules/other";
+import { useEffect, useState } from "react";
 
 const FeatureDisplay = () => {
   const [commandMap, setCommandMap] = useState({} as { [key: string]: number });

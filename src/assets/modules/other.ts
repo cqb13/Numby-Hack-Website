@@ -97,7 +97,29 @@ const other: moduleSettings[] = [
     name: "Discord Presence",
     description: "Change name and image of meteor discord RPC.",
     note: "Thx Crosby",
-    settings: []
+    settings: [
+      {
+        name: "Numby Image",
+        category: "Numby Presence",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the Numby Hack logo as the large image."
+      },
+      {
+        name: "Numby Image Text",
+        category: "Numby Presence",
+        type: "Boolean",
+        booleanState: true,
+        description: "Displays Numby Hack text as the large image text."
+      },
+      {
+        name: "Numby Details",
+        category: "Numby Presence",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the current module in use as the details."
+      }
+    ]
   },
   {
     name: "Player Particles",

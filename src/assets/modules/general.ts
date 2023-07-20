@@ -527,6 +527,136 @@ const modules: moduleSettings[] = [
     ]
   },
   {
+    name: "Jump Helper",
+    description: "Draws a circle around you when you jump to help with movement.",
+    settings: [
+      {
+        name: "Use Rainbow",
+        category: "Default",
+        type: "Boolean",
+        booleanState: false,
+        description: "Rainbow circle"
+      },
+      {
+        name: "Circle Color",
+        category: "Default",
+        type: "Color",
+        color: {
+          shapeMode: false,
+          lineColor: false,
+          sideColor: false,
+          tracerColor: false,
+          normalColor: true,
+          background: false,
+          text: false,
+          color: "#92bc62"
+        },
+        description: "The color of the circle."
+      },
+      {
+        name: "Circle Radius",
+        category: "Default",
+        type: "Range",
+        description: "The radius of the circle."
+      }
+    ]
+  },
+  {
+    name: "Log Spots +",
+    description: "Shows you where another player logged out",
+    settings: [
+      {
+        name: "Name",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the name of the player."
+      },
+      {
+        name: "Health",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Shows the health of the player."
+      },
+      {
+        name: "Coordinates",
+        category: "Default",
+        type: "Boolean",
+        booleanState: false,
+        description: "Shows the coordinates of the player."
+      },
+      {
+        name: "Armor Check",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Check if the player has armor on."
+      },
+      {
+        name: "Scale",
+        category: "Default",
+        type: "Range",
+        description: "The scale of the text"
+      },
+      {
+        name: "Notifications",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Notifies you when a player logs out."
+      },
+      {
+        name: "Render Color",
+        category: "Render",
+        type: "Color",
+        color: {
+          shapeMode: true,
+          lineColor: true,
+          sideColor: true,
+          tracerColor: false,
+          normalColor: false,
+          background: false,
+          text: false,
+          color: "#92bc62"
+        },
+        description: "The color the the logout spot."
+      },
+      {
+        name: "Name Color",
+        category: "Render",
+        type: "Color",
+        color: {
+          shapeMode: false,
+          lineColor: false,
+          sideColor: false,
+          tracerColor: false,
+          normalColor: false,
+          background: false,
+          text: true,
+          color: "#ffffff"
+        },
+        description: "The color of the player name."
+      },
+      {
+        name: "Background Color",
+        category: "Render",
+        type: "Color",
+        color: {
+          shapeMode: false,
+          lineColor: false,
+          sideColor: false,
+          tracerColor: false,
+          normalColor: false,
+          background: true,
+          text: false,
+          color: "#000000"
+        },
+        description: "The color of the nametag background"
+      },
+    ]
+  },
+  {
     name: "New Chunks",
     description: "Highlights new chunks.",
     note: "Modified from Meteor Rejects",
@@ -714,7 +844,43 @@ const modules: moduleSettings[] = [
     name: "Safe Fire",
     description: "Prevents you from walking into fire",
     note: "Original from Tanuki",
-    settings: []
+    settings: [
+      {
+        name: "Fire",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Prevents you from walking into fire."
+      },
+      {
+        name: "Soul Fire",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Prevents you from walking into soul fire."
+      },
+      {
+        name: "Campfire",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Prevents you from walking into campfires."
+      },
+      {
+        name: "Soul Campfire",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Prevents you from walking into soul campfires."
+      },
+      {
+        name: "Lava",
+        category: "Default",
+        type: "Boolean",
+        booleanState: true,
+        description: "Prevents you from walking into lava."
+      }
+    ]
   },
   {
     name: "Safety Net",
@@ -832,7 +998,7 @@ const modules: moduleSettings[] = [
     name: "Tunnel ESP",
     description:
       "Shows you were tunnels are (meteor has it, this one was first).",
-    note: "Currently broken",
+    note: "Currently broken (Wont be fixed)",
     settings: [
       {
         name: "Range",
