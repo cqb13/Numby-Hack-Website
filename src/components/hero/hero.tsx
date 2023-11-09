@@ -9,10 +9,10 @@ const Hero = () => {
 
   useEffect(() => {
     getDownloads();
-    fetch("https://github-release-downloads.vercel.app/LDU?user=cqb13&repo=Numby-hack")
-      .then((res) => res.text())
+    fetch("https://api.github.com/repos/cqb13/Numby-hack/releases/latest")
+      .then((res) => res.json())
       .then((data) => {
-        setDownloadLink(data);
+        setDownloadLink(data.assets[0].browser_download_url);
       });
 
     fetch("https://api.github.com/repos/cqb13/Numby-hack")
@@ -23,10 +23,16 @@ const Hero = () => {
   }, []);
 
   const getDownloads = () => {
-    fetch("https://github-release-downloads.vercel.app/TRD?user=cqb13&repo=Numby-hack")
+    fetch("https://api.github.com/repos/cqb13/Numby-hack/releases")
       .then((res) => res.json())
       .then((data) => {
-        setDownloads(data);
+        let totalDownloads = 0;
+        data.forEach((release: any) => {
+          release.assets.forEach((asset: any) => {
+            totalDownloads += asset.download_count;
+          });
+        });
+        setDownloads(totalDownloads);
       });
   };
 
