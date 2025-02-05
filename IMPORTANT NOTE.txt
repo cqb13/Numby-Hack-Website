@@ -1,3 +1,0 @@
-to anyone who has to work/look at this code in the future. 
-
-I am sorry for the bad code, I don't know what I was on when I wrote this.

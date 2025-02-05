@@ -7,14 +7,16 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
     props.onClick?.(event);
   };
 
   return (
     <a
       onClick={handleClick}
-      className='button'
+      className="button"
       type={props.type}
       target={props.target}
       href={props.href}
