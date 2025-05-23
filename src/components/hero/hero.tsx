@@ -56,6 +56,19 @@ const Hero = () => {
           <sub className="button-detail">stars:{stars}</sub>
         </Button>
       </div>
+      <a
+        className="meteor-addons"
+        target="_blank"
+        href="https://meteor-addons.cqb13.dev/"
+      >
+        <img
+          src="https://meteor-addons.cqb13.dev/icon.svg"
+          alt="meteor addons icon"
+          width={30}
+          height={30}
+        />
+        <p>Meteor Addon List</p>
+      </a>
     </section>
   );
 };

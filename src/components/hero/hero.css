@@ -37,6 +37,33 @@
   z-index: 1;
 }
 
+.meteor-addons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  border-color: rgb(0, 0, 0, 0);
+}
+
+.meteor-addons p {
+  font-size: 1.2rem;
+  color: #dab2ff;
+}
+
+.meteor-addons:hover {
+  border: 1px solid;
+  border-color: #dab2ff;
+  transition: all ease-in-out 300ms;
+}
+
 @media (max-width: 780px) {
   .title-container {
     width: 80%;
