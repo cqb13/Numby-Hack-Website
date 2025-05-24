@@ -1,22 +1,16 @@
 {
-  "name": "numby-hack-website",
-  "private": true,
-  "version": "0.0.0",
+  "name": "",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react-swc": "^3.0.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.5.2"
+    "@tailwindcss/vite": "^4.1.7",
+    "astro": "^5.8.0",
+    "tailwindcss": "^4.1.7"
   }
 }
