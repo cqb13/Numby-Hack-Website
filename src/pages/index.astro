@@ -9,20 +9,31 @@ import backgroundImage from "../assets/Background-1.png"
     const downloads = document.getElementById("downloads");
     const stars = document.getElementById("stars");
 
-    function getDownloads() {
-      fetch("https://api.github.com/repos/cqb13/Numby-hack/releases")
-        .then((res) => res.json())
-        .then((data) => {
-          let totalDownloads = 0;
-          data.forEach((release: any) => {
-            release.assets.forEach((asset: any) => {
-              totalDownloads += asset.download_count;
-            });
-          });
-          if (downloads) {
-            downloads.textContent = `downloads: ${totalDownloads.toLocaleString()}`;
+    async function getDownloads() {
+      const baseUrl = "https://api.github.com/repos/cqb13/Numby-hack/releases?per_page=100&page=";
+      let page = 1;
+      let totalDownloads = 0;
+
+      while (true) {
+        const res = await fetch(baseUrl + page);
+        const data = await res.json();
+
+        if (!Array.isArray(data) || data.length === 0) {
+          break;
+        }
+
+        for (const release of data) {
+          for (const asset of release.assets) {
+            totalDownloads += asset.download_count;
           }
-        });
+        }
+
+        page++;
+      }
+
+      if (downloads) {
+        downloads.textContent = `downloads: ${totalDownloads.toLocaleString()}`;
+      }
     }
 
     fetch("https://api.github.com/repos/cqb13/Numby-hack/releases/latest")
